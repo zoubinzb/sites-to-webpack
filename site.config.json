@@ -1,0 +1,155 @@
+{
+     "countrys": {
+          "us": {
+               "device": [
+                    "pc",
+                    "ipad"
+               ],
+               "build_type": "default"
+          },
+          "xp": {
+               "device": [
+                    "mobile",
+                    "pc"
+               ]
+          },
+          "jp": {
+               "device": [
+                    "pc",
+                    "ipad"
+               ],
+               "build_type": "default"
+          },
+          "de": {
+               "device": [
+                    "mobile",
+                    "pc",
+                    "ipad"
+               ],
+               "build_type": "program1"
+          },
+          "es": {}
+     },
+     "siteRootDirectory": {
+          "rootWaitCopyFile": [
+               "ads.txt",
+               "robots.txt"
+          ],
+          "rootCommonPath": "./template/common/"
+     },
+     "entry": {
+          "pc-index": "./template/pages/pc-index/index.js",
+          "ipad-index": "./template/pages/ipad-index/index.js",
+          "mobile-index": "./template/pages/mobile-index/index.js",
+          "pc-detail": "./template/pages/pc-detail/index.js",
+          "ipad-detail": "./template/pages/ipad-detail/index.js",
+          "mobile-detail": "./template/pages/mobile-detail/index.js",
+          "pc-video": "./template/pages/pc-video/index.js",
+          "ipad-video": "./template/pages/ipad-video/index.js",
+          "mobile-video": "./template/pages/mobile-video/index.js",
+          "commonCss": "./template/static/css/common.css"
+     },
+     "indexPage": {
+          "default": {
+               "template": [
+                    "./template/pages/$2-index/index.pug",
+                    "./template/pages/$2-index/index.pug",
+                    "./template/pages/$2-detail/index.pug",
+                    "./template/pages/$2-video/index.pug",
+                    "./template/pages/$2-index/index.pug",
+                    "./template/pages/privacy/index.pug",
+                    "./template/pages/contacts/index.pug",
+                    "./template/pages/about/index.pug"
+               ],
+               "filename": [
+                    "$/$1/$2/index.html",
+                    "$/$1/$2/category/",
+                    "$/$1/$2/detail/",
+                    "$/$1/$2/video/",
+                    "$/$1/$2/lp/",
+                    "$/$1/$2/privacy.html",
+                    "$/$1/$2/contacts.html",
+                    "$/$1/$2/about.html"
+               ],
+               "data": [
+                    "indexData",
+                    "categoryPages",
+                    "detailData",
+                    "detailData",
+                    "handleLpData"
+               ],
+               "options": [
+                    0,
+                    {
+                         "loop": {
+                              "pagename": "$categoryPagesName"
+                         }
+                    },
+                    {
+                         "loop": {
+                              "pagename_key": "page_name"
+                         }
+                    },
+                    {
+                         "loop": {
+                              "pagename_key": "page_name"
+                         }
+                    },
+                    {
+                         "index": true,
+                         "isLp": true,
+                         "loop": {
+                              "pagename": "$lpPageName"
+                         }
+                    },
+                    0,
+                    0,
+                    0
+               ]
+          },
+          "program1": {
+               "template": [
+                    "./template/pages/$2-index/index.pug",
+                    "./template/pages/$2-index/index.pug",
+                    "./template/pages/$2-video/index.pug",
+                    "./template/pages/$2-index/index.pug"
+               ],
+               "filename": [
+                    "$/$1/$2/index.html",
+                    "$/$1/$2/category/",
+                    "$/$1/$2/video/",
+                    "$/$1/$2/lp/"
+               ],
+               "data": [
+                    "indexData",
+                    "categoryPages",
+                    "detailData",
+                    "handleLpData"
+               ],
+               "options": [
+                    0,
+                    {
+                         "loop": {
+                              "pagename": "$categoryPagesName"
+                         }
+                    },
+                    {
+                         "loop": {
+                              "pagename_key": "page_name"
+                         }
+                    },
+                    {
+                         "loop": {
+                              "pagename": "$lpPageName"
+                         }
+                    }
+               ]
+          }
+     },
+     "common": "$common",
+     "dev_config": {
+          "name": "superbaby",
+          "dev_siteTarget": "us",
+          "device": "pc"
+     }
+}
