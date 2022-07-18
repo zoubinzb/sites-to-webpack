@@ -1,0 +1,23 @@
+extends ../../component/base.pug
+
+block head
+  title #{common.lang.WebTitle}
+  meta(name="keyword" content=`${common.lang.HeadKeyWord}`)
+  style.
+    .text-body {
+      max-width: 1200px;
+      padding: 10px 20px;
+      margin: 0 auto;
+    }
+
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+block body
+  div(style="width: 100%")
+    .text-body
+      div!= `${common.lang.ABOUT}`
+  include ../../component/footer/footer.pug

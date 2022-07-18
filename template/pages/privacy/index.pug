@@ -1,0 +1,14 @@
+extends ../../component/base.pug
+
+block head
+  title #{common.lang.WebTitle}
+  meta(name="keyword" content=`${common.lang.HeadKeyWord}`)
+  style
+    include ./index.css
+
+block body
+  .page
+    .container
+      div!= `${common.lang.PRIVACY}`
+    include ../../component/footer/footer.pug
+    script

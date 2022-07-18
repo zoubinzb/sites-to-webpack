@@ -5,40 +5,52 @@
   "type": "commonjs",
   "main": "s",
   "scripts": {
-    "dev": "webpack-dev-server --watch  --config webpack.dev.js ",
-    "build": "rm -rf sites && webpack  --config webpack.prod.js"
+    "server": "webpack-dev-server --watch --config webpack.dev.js ",
+    "build": "rm -rf sites && webpack  --config webpack.prod.js",
+    "lint": "eslint --ext .js template",
+    "lint:fix": "eslint --fix --ext .js template",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.8.4",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@types/node": "^14.0.11",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.2",
     "core-js": "^3.6.4",
     "css-loader": "^3.5.3",
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-webpack-plugin": "^2.7.0",
     "file-loader": "^6.0.0",
+    "fs-extra": "^10.1.0",
+    "husky": "^8.0.1",
+    "images": "^3.2.4",
+    "lint-staged": "^13.0.3",
     "mini-css-extract-plugin": "^0.9.0",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
+    "raw-loader": "^4.0.2",
     "regenerator-runtime": "^0.13.3",
+    "request": "^2.88.2",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
+    "util": "^0.12.4",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2",
-    "raw-loader": "^4.0.2",
-    "request": "^2.88.2",
-    "util": "^0.12.4",
-    "fs-extra": "^10.1.0",
-    "images": "^3.2.4"
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-   
-    "jquery": "^3.6.0"
-    
+    "jquery": "^3.6.0",
+    "mockjs": "^1.1.0",
+    "pug": "^3.0.2"
   }
 }

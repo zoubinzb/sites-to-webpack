@@ -1,0 +1,20 @@
+doctype html
+//- - var pageType = pagename.indexOf('detail') != -1 ? `'dp'` : `'lp'`;
+//- mixin vigLinkEvent(url, event,title)
+//-   -  attributes.href = url;
+//-   -  attributes.title = title;
+//-   //- 判断有无 vig
+//-   - var hasVig = true;
+//-   - attributes.onclick = `link_click(${hasVig ? false : `'${url.replace(/'/g, "%27")}'`}, ${event.join(',')})`;
+//-   a&attributes(attributes)
+//-     block
+html(lang=`${common.lang.SiteLang}`)
+  head
+    include ../component/ga.pug
+    include ../component/head.pug
+    block head
+  body
+    noscript
+      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-KW882PV" height="0" width="0" style="display:none;visibility:hidden")
+    block body 
+

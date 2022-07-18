@@ -1,9 +1,13 @@
+/*eslint-disable*/
 const request = require("request");
 const  util = require('util');
 const fse = require('fs-extra');
 const path = require("path");
 const images = require('images');
 const getPromise = util.promisify(request.get);
+// require("./mock/index.js")
+
+
 
 const url = 'http://api.sp.com/v1/video';
 const project = "superbaby";

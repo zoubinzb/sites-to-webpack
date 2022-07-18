@@ -1,3 +1,4 @@
+/*eslint-disable*/
 /**
  * 
  * @param {*} obj 需要克隆的对象
